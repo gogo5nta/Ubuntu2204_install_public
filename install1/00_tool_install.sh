@@ -1,5 +1,5 @@
 #!/bin/bash
-# update 2022.02.07
+# update 2023.06.18
 
 # Check OS ver and Kernel ver
 echo "# Check OS ver and Kernel ver"
@@ -11,8 +11,15 @@ echo "# rename English holder"
 LANG=C xdg-user-dirs-gtk-update
 
 # install chromium-browser
-echo "# install chromium-browser"
-sudo apt -y install chromium-browser
+#echo "# install chromium-browser"
+#sudo apt -y install chromium-browser
+
+# install chrome-browser
+# https://inno-tech-life.com/dev/linux/ubuntu_chrome/
+echo "install chrome-browser"
+cd /home/$USER/Downloads
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
 # install terminator
 echo "# install terminator"
@@ -27,7 +34,7 @@ echo "# install good tool gnome-tweaks"
 sudo apt -y install gnome-tweaks
 
 # install VSCode
-#https://qiita.com/yoshiyasu1111/items/e21a77ed68b52cb5f7c8
+# https://qiita.com/yoshiyasu1111/items/e21a77ed68b52cb5f7c8
 echo "# install VSCode"
 sudo apt -y install curl
 curl -L https://go.microsoft.com/fwlink/?LinkID=760868 -o vscode.deb
