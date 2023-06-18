@@ -66,7 +66,7 @@ service docker restart
 # 確認(docker --gpus)
 # sudo docker run --gpus all nvidia/cuda:11.0-base-ubuntu18.04 nvidia-smi
 # sudo docker run --gpus all nvidia/cuda:11.7.0-base-ubuntu20.04 nvidia-smi
-docker run --gpus all nvidia/cuda:11.7.0-base-ubuntu22.04 nvidia-smi
+docker run --rm --gpus all nvidia/cuda:11.7.0-base-ubuntu22.04 nvidia-smi
 
 # docker-composeの確認
 #docker-compose -v
